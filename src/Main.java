@@ -2,26 +2,26 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(" ");
         System.out.println("Задание 1:");
-        int SumSave = 15000;
+        int sumSave = 15000;
         int result = 0;
         int i = 0;
         while (result <= 2_459_000) {
-            result = result + SumSave;
+            result = result + sumSave;
             i = i + 1;
-
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + result + " рублей");
         }
-        System.out.println("Месяц " + i + ", сумма накоплений равна " + result + " рублей");
+
 
         System.out.println(" ");
         System.out.println("Задание 2:");
         int a = 0;
         int b = 11;
-        while (a < 10) {
+        for (;a < 10;) {
             a = a + 1;
             System.out.print(a + " ");
         }
         System.out.println();
-        while (b > 1) {
+        for (;b > 1;) {
             b = b - 1;
             System.out.print(b + " ");
         }
@@ -29,24 +29,25 @@ public class Main {
         System.out.println(" ");
         System.out.println(" ");
         System.out.println("Задание 3:");
-        int People = 12_000_000;
+        int people = 12_000_000;
         int yesrs = 1;
-        double smertnost = (double) 8 / 1000 * People;
-        double rozhdaemost = (double) 17 / 1000 * People;
-        while (yesrs < 10) {
+        double smertnost = (double) 8 / 1000 * people;
+        double rozhdaemost = (double) 17 / 1000 * people;
+        while (yesrs <= 10) {
+            people = (int) (Math.round(people + rozhdaemost - smertnost));
+            System.out.println("Год " + yesrs + ", численность населения составляет " + people);
             yesrs = yesrs + 1;
-            People = (int) (Math.round(People + rozhdaemost - smertnost));
         }
-        System.out.print("Год " + yesrs + ", численность населения составляет " + People);
+
 
 
         System.out.println(" ");
         System.out.println("Задание 4,5:");
-        double SumSaveVas = 15000;
+        double sumSaveVas = 15000;
         double resultVas = 0;
         int month = 1;
         double percent = 0.07;
-        resultVas = SumSaveVas;
+        resultVas = sumSaveVas;
 
         while (resultVas <= 12_000_000) {
             resultVas += percent * resultVas;
@@ -59,11 +60,11 @@ public class Main {
 
         System.out.println(" ");
         System.out.println("Задание 6:");
-        double SumSaveVasilii = 15000;
+        double sumSaveVasilii = 15000;
         double resultVasilii = 0;
         int mesyac = 1;
         double percentVas = 0.07;
-        resultVasilii = SumSaveVasilii;
+        resultVasilii = sumSaveVasilii;
 
         while (mesyac <= 108) {
             resultVasilii += percentVas * resultVasilii;
